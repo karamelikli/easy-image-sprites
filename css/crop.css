@@ -1,0 +1,57 @@
+.corpOrtu{
+    background-color: #000000;
+    
+    opacity:0.4;
+    filter:alpha(opacity=40); 
+    
+    z-index: 2;
+    position: absolute;
+    
+    
+}
+.cropic {
+    width: 50px;
+    
+    height: 250px;
+    left: 150px;
+    top: 125px;
+    position: absolute;
+    border: 1px #000 dashed;
+    z-index: 3;
+    
+}
+.cropdot{
+    /*  height: inherit;position: absolute;width: inherit;*/
+}
+.cropdot div{
+    position: absolute;
+    width: 1px;
+    background-color: red;
+    opacity:0;
+    filter:alpha(opacity=0); 
+    z-index: 5;
+    
+}
+.cropbox div{
+    width: 6px;
+    height: 6px;
+    background-color: #FFF;
+    border: 1px solid #000;
+    position: absolute;
+    opacity: 1;
+    filter:alpha(opacity=100);
+    z-index: 6;
+}
+.cropmain{
+    position: absolute;
+    width: auto;
+    
+    height: auto; 
+}
+#ic{
+    position: absolute;
+    background-color: #fbe997;
+    border: 1px solid #4c9900;
+    padding: 2px;
+    z-index: 30;
+}

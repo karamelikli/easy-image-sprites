@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/crop.css"> 
+    <!--  <script type="text/javascript" src="images/jquery.js"></script> -->
+    <script type="text/javascript" src="js/background.js"></script>
+    
+    <script type="text/javascript">
+        function yuu() {
+            $('#wmcrop').bgyer();
+        }
+        $(window).ready(function() {
+            $("#wmcrop").bgyer({preview: true, previewW: 140, previewH: 70, ratio: 2, insertform: true});
+            $("#divx,#divy,#sorc,#divW,#divH,#fc,#fr,#fa").change(yuu)
+            
+        });
+    </script>
+    
+    <title>Jquery ALert</title>
+</head>
+
+<body>
+    <div class="container">
+
+          
+        <div class="row">
+            <div class="col-12">                 
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        Size of displayed image
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Change the dimantion of desired image show size</h5>
+                        Div width <input type="text" name="" id="divW" value="95">
+                        Div height <input type="text" name="" id="divH" value="115"><br>
+                        
+                    </div>
+                </div>
+            </div>
+         
+
+            <div class="col-12">                 
+                <div class="card mb-3">
+                    <div class="card-header text-white bg-warning">
+                         Background 
+
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h5 class="card-title">Change properties of the shown image</h5>
+                        <div class="form-group  row">
+                            <label for="fc" class="col-sm-3 col-form-label">background-color</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control"  id="fc" value="#000">
+                            </div>
+
+                            <label for="sorc" class="col-sm-3 col-form-label">background-image URL</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control"  id="sorc" value="images/image_sprite.png">
+                            </div>
+
+
+                            <label for="fr" class="col-sm-3 col-form-label">background-repeat</label>
+                            <div class="col-sm-9">
+                                <select class="form-control"  name="Repeat" id="fr"><option selected>repeat</option><option>repeat-x</option><option>repeat-y</option><option>no-repeat</option><option>inherit</option></select>
+                            </div>
+                            <label for="fa" class="col-sm-3 col-form-label">background-attachment</label>
+                            <div class="col-sm-9">
+                                <select class="form-control"  name="attach" id="fa"><option selected>scroll</option><option>fixed</option><option>inherit</option></select>
+                            </div>
+                            <label for="bpos" class="col-sm-3 col-form-label">background-attachment</label>
+
+                       
+                        <div class="row col-sm-9" id="bpos">
+                            <div class="col">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <div class="input-group-text">X</div>
+                                    </div>
+                             <input type="text" id="divx" value="0" class="form-control" placeholder="0">
+                             </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <div class="input-group-text">Y</div>
+                                    </div>
+                              <input type="text" id="divy" value="0" class="form-control" placeholder="0">
+                                </div>
+                            </div>
+                          </div>
+                         </div>
+              
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+         
+            <div class="col-12">                 
+                <div class="card mb-3">
+                    <div class="card-header text-white bg-success">
+                        Produced CSS
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Copy and paste desired CSS</h5>
+                        <h6>Long version</h6>
+                           <div  class="alert alert-secondary"  style="overflow: hidden; "> background-color:<span id="uc" ></span>; background-image:<span id="ui" ></span>; background-repeat:<span id="ur" ></span>; background-attachment:<span id="ua" ></span>;  background-position:<span id="up" ></span>; width:<span class="spw" ></span>px; height:<span class="sph"  ></span>px;</div>
+                           <h6>Compact version</h6>
+                           <div class="alert alert-success" style="overflow: hidden;">background:<span id="bc" ></span> <span id="bi" ></span> <span id="br" ></span> <span id="ba" ></span> <span id="bp" ></span>; width:<span class="spw" ></span>px; height:<span class="sph"  ></span>px;</div>
+            
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">                 
+            <div class="card mb-3">
+                <div class="card-header text-white bg-success">
+                   preview, drag and drop
+
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Drag and drop the big image and preview the visual outputbox</h5>
+                    <div class="row">
+                    <div    class="col-2 "><b> preview</b></div> <div class="col-10 ">
+                        <div class="cropic2" style=" border: 10px solid red;margin: 10px;"></div>
+                    </div>
+
+                    <div    class="col-2 "><b> Drag and drop</b></div> <div class="col-10 ">
+                          <div   id="wmcrop" style="position: relative;overflow: hidden;clear: both; ">
+                <!--<img src="http://localhost.com/site/tools/download/Download_example.php"  />--></div> 
+                <div id="test" style="position: relative;overflow: hidden;clear: both;width: 500px;"></div>
+                <p class="sss"></p>
+                <p class="son"></p>
+                <form method="post">
+                    <input type="text" name="" id="x_wmcrop"><input type="text" name="" id="y_wmcrop">
+                    <input type="text" name="" id="w_wmcrop"><input type="text" name="" id="h_wmcrop">
+                </form>
+                <!-- /site/jquery/wmgenel/upload/usta.jpg -->
+            </div>
+                        
+                    </div>    
+    </div>
+            
+      
+
+                </div>
+            </div>
+            </div>
+  
+        <div class="row">
+        
+          
+        </div>
+    </body>
+    
+    </html>
+    
+    
